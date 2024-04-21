@@ -1,26 +1,33 @@
-
-
-
 # SmartCalc Documentation
 
 ## Copyright Information
 This calculator is protected by copyright. All rights reserved.
-© 2024 by adellabr.
+© 2024 by ebbenwai.
 
 ## Installation
-To use this calculator, the user needs to install the following utilities:
+Для использования этого калькулятора пользователю необходимо установить следующие утилиты:
 - gcc
 - make
 - qmake
 
 ## Development Details
-The calculator has been developed using the C/C++ programming language and the QT Creator version 6.2.
+
+### Backend
+"Backend" часть была реализована на языке программирования C, стандарта C11, с использованием компилятора gcc. Основные функции включает:
+- Вычисление математических выражений с использованием обратной польской нотации, реализованный через алгоритм Дейкстры. Данный способ позволяет обрабатывать сложные выражения, включая тригонометрические функции, математические операции и унарные знаки.
+- Сборка проекта с использованием Makefile, расположенного в папке src. Для установки приложения необходимо выполнить команду make install, для удаления - make uninstall.
+
+### Frontend
+"Frontend" часть была реализована на языке программирования C++ и с использованием библиотеки QT. Основные функции включают:
+- Калькулятор с возможностью выполнения различных операций, включая арифметические действия и тригонометрические функции.
+- Графический модуль для построения графиков функций с использованием библиотеки QCustomPlot. Это позволяет визуализировать математические зависимости и настраивать параметры графиков.
+
 
 ## Installation Command
-To install the calculator, please run the following command:
+Чтобы установить калькулятор, выполните следующую команду:
 make install
 ## Arithmetic Operations
-The calculator supports the following arithmetic operations:
+Калькулятор поддерживает следующие арифметические операции:
 
 | Operator name | Infix notation <br /> (Classic) | Prefix notation <br /> (Polish notation) | Postfix notation <br /> (Reverse Polish notation) |
 | --------- | ------ | ------ | ------ |
@@ -36,7 +43,7 @@ The calculator supports the following arithmetic operations:
 
 
 ## Mathematical Functions
-The calculator includes various mathematical functions, including:
+Калькулятор включает в себя различные математические функции, в том числе:
   
 | Function description | Function |
 | -------------------- | -------- |
@@ -52,4 +59,4 @@ The calculator includes various mathematical functions, including:
 
 
 ## Function Plotting
-The calculator provides the ability to plot functions. You can visualize mathematical equations easily.
+Калькулятор предоставляет возможность построения графиков функций. Вы можете легко визуализировать математические уравнения.
